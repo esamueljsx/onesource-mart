@@ -1,11 +1,11 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+// import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
   const navLinks = [
@@ -66,7 +66,11 @@ const Navbar = () => {
 
           {/* Mobile Menu */}
           <div className="md:hidden">
-            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <Button variant="ghost" size="icon" className="size-10">
+              <Menu className="size-6" />
+              <span className="sr-only">Open menu</span>
+            </Button>
+            {/* <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon" className="size-10">
                   <Menu className="size-6" />
@@ -107,7 +111,7 @@ const Navbar = () => {
                   </nav>
                 </div>
               </SheetContent>
-            </Sheet>
+            </Sheet> */}
           </div>
         </div>
       </div>

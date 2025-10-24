@@ -126,7 +126,7 @@ const Footer = () => {
           {/* Copyrights */}
           <div className="border-t-[1.5px] border-gray-50 pt-10 w-full">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-sm lg:text-base text-[#555]">
-              <div className="flex flex-wrap items-center space-x-2.5">
+              <div className="flex items-center space-x-2.5">
                 <a href="#" className="hover:text-brand-red transition-colors">
                   FAQs
                 </a>
