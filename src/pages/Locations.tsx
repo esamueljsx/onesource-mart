@@ -61,7 +61,7 @@ const Locations = () => {
 
   return (
     <div className="w-full px-3 lg:px-6">
-      <div className=" mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl md:text-6xl">
             Our Store Locations
@@ -73,11 +73,11 @@ const Locations = () => {
         </div>
       </div>
 
-      <div className="mt-15 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="mt-15 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 container p-5">
         {branches.map((branch) => (
           <div
             key={branch.name}
-            className="bg-white border-style p-6 hover:border-red-200 transition-colors duration-200"
+            className="bg-gray-50/10 border-style p-6 hover:border-red-200 transition-colors duration-200"
           >
             {/* Store Header */}
             <div className="flex items-start space-x-4 mb-6">
@@ -126,7 +126,7 @@ const Locations = () => {
             </div>
 
             {/* Manager Section */}
-            <div className="bg-[#f6f6f6] border border-gray-50 rounded-xl p-4 mb-6">
+            <div className="bg-white border border-gray-50 rounded-xl p-4 mb-6">
               <div className="flex items-center space-x-3 mb-3">
                 <div className="relative">
                   <img
