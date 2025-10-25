@@ -9,7 +9,7 @@ function AboutChooseUs() {
   ];
 
   return (
-    <section className="bg-red-800 text-white p-8 rounded-lg">
+ <section className="bg-blend-darken bg-[url('/assets/one-source.jpg')] bg-[#2f2424d4] bg-cover text-white p-8 rounded-lg">
       <h2 className="text-3xl font-bold mb-6">Why Choose Us?</h2>
       <ul className="space-y-3 text-lg">
         {list.map((e, index) => (

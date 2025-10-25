@@ -1,6 +1,15 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+
+.promotions-navigate-btn{
+  opacity: 0.2;
+  cursor: pointer;
+}
+.promotions-navigate-btn:hover{
+  opacity: 1;
+}
+
 @font-face {
   font-family: "Satoshi";
   src: url("/assets/fonts/Satoshi-Light.otf");
