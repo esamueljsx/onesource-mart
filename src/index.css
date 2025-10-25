@@ -1,9 +1,51 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@font-face {
+  font-family: "Satoshi";
+  src: url("/assets/fonts/Satoshi-Light.otf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/assets/fonts/Satoshi-Regular.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/assets/fonts/Satoshi-Medium.otf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/assets/fonts/Satoshi-Bold.otf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/assets/fonts/Satoshi-Black.otf");
+  font-weight: 900;
+  font-style: normal;
+}
+
 @custom-variant dark (&:is(.dark *));
 
-:root { 
+@theme {
+  --color-brand-red: #d82519;
+  --color-text-black: #151515;
+  --color-gray-50: #d5d5d5;
+  --font-satoshi: "Satoshi", sans-serif;
+}
+
+:root {
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -40,7 +82,7 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-} 
+}
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -115,10 +157,24 @@
 }
 
 @layer base {
+  html {
+    @apply scroll-smooth;
+  }
   * {
     @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-[1340px] w-full mx-auto bg-white rounded-[20px] shadow-lg border border-gray-50 overflow-hidden;
+    box-shadow: #0000000d 4px 4px 30px 0px;
+  }
+
+  .border-style {
+    @apply border border-gray-50 rounded-[20px];
   }
 }
