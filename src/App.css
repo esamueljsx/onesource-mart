@@ -12,3 +12,11 @@
     animation: logo-spin infinite 20s linear;
   }
 }
+
+.promotions-navigate-btn{
+  opacity: 0.2;
+  cursor: pointer;
+}
+.promotions-navigate-btn:hover{
+  opacity: 1;
+}
