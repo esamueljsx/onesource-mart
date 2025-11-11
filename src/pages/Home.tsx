@@ -1,7 +1,6 @@
 import AppSection from '../components/SectionComponents/AppSection'
 import ImageCarousel from '../components/ui/ImageCarousel'
 import type { CarouselImage } from '../components/ui/ImageCarousel'
-import BouncyAttractor from '../components/ui/BouncyAttractor'
 
 // --- Data for Carousel and Categories (Full Supermarket Content) ---
 const carouselImages: CarouselImage[] = [
@@ -44,9 +43,9 @@ const featuredCategories: Category[] = [
 
 const HeroSection = () => (
     // Content is now a direct child of the centered AppSection div
-    <div className='flex flex-col lg:flex-row gap-12 items-center justify-between min-h-[calc(100vh-80px)] pt-20' id="home">
-        <div className='flex flex-col justify-center shrink-0 lg:w-1/2 items-center lg:items-start text-center lg:text-left'>
-            <h1 className='font-extrabold text-6xl md:text-8xl lg:text-9xl leading-tight mb-4 text-gray-900'>
+    <div className='flex flex-col xl:flex-row gap-12 items-center justify-between h-[calc(100vh-80px)]' id="home">
+        <div className='flex flex-col justify-center shrink-0 xl:w-1/2 items-center xl:items-start text-center xl:text-left'>
+            <h1 className='font-extrabold text-6xl md:text-8xl xl:text-9xl leading-tight mb-4 text-gray-900'>
                 Shop <span className='text-red-600'>Smart</span>.
                 <br />
                 Find <span className='text-red-600'>Everything</span>.
@@ -56,14 +55,14 @@ const HeroSection = () => (
             </p>
             
             <a href="#products">
-                <button className='bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105'>
-                    <BouncyAttractor text="Explore Departments" customStyle="text-xl"/>
+                <button className='bg-red-600 cursor-pointer hover:bg-red-700 text-xl text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 active:scale-95 active:bg-red-700'>
+                    Explore Departments
                 </button>
             </a>
         </div>
 
-        <div className='lg:w-1/2 w-full'>
-            <ImageCarousel images={carouselImages} className='max-w-full' />
+        <div className='flex w-full xl:h-[800px] xl:w-1/2 xl:pr-10'>
+            <ImageCarousel images={carouselImages} className='h-full w-full!' />
         </div>
     </div>
 );
@@ -114,12 +113,12 @@ const FeaturesSection = () => (
 
 function Home() {
     return (
-        <div className='flex items-center justify-center w-screen'>
+        <div className='flex items-center justify-center w-full'>
             <div className="flex flex-col min-h-screen bg-white text-gray-900 max-w-390 rounded-[4rem] overflow-hidden">
                 
                 {/* The main content area should be full width to allow sections to stretch */}
-                <main className='w-full pt-20'> 
-                    <AppSection id="hero" className='min-h-[calc(100vh-80px)] pt-20'>
+                <main className='w-full'> 
+                    <AppSection id="hero" className='min-h-[calc(100vh-80px)]'>
                         <HeroSection />
                     </AppSection>
                     
@@ -131,8 +130,8 @@ function Home() {
                         <div className='text-center py-10 md:py-20'>
                             <h2 className='text-4xl font-bold mb-4 text-red-800'>Weekly Deals & Exclusive Offers!</h2>
                             <p className='text-xl text-gray-700 mb-8'>Sign up for our newsletter and get 10% off your first order on any department.</p>
-                            <button className='bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full shadow-xl transition duration-300'>
-                                <BouncyAttractor text="Sign Up Now" customStyle="text-xl"/>
+                            <button className='bg-red-600 cursor-pointer hover:bg-red-700 hover:scale-105 active:bg-red-700 active:scale-95 text-white font-bold py-3 px-8 rounded-full shadow-xl transition duration-300'>
+                                Sign Up Now
                             </button>
                         </div>
                     </AppSection>

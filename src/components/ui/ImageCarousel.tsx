@@ -70,12 +70,12 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
 
   return (
     <div className={`relative w-full mx-auto ${className}`} aria-label="Image carousel">
-      <div className="relative overflow-hidden rounded-xl shadow-2xl aspect-video md:aspect-[3/2]">
+      <div className="relative overflow-hidden w-full h-full! rounded-xl shadow-2xl aspect-video md:aspect-[3/2]">
         {/* Carousel Slides (Fade Transition for simplicity) */}
         {images.map((image, index) => (
           <div
             key={image.id}
-            className={`absolute inset-0 transition-opacity ease-in-out flex items-center justify-center`}
+            className={`absolute inset-0 w-full h-full transition-opacity ease-in-out flex items-center justify-center`}
             style={{ 
                 opacity: index === currentIndex ? 1 : 0,
                 transitionDuration: `${transitionDuration}ms`,
@@ -94,8 +94,8 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
             </div>
             
             {image.caption && (
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent text-white p-16 text-left">
-                <p className="text-xl md:text-3xl font-semibold">{image.caption}</p>
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent text-white py-8 px-7 md:py-12 md:px-12 xl:py-16 xl:px-16 text-left">
+                <p className="text-lg sm:text-xl md:text-3xl font-semibold">{image.caption}</p>
               </div>
             )}
           </div>
